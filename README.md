@@ -309,7 +309,7 @@ Running a lottery ticket experiment involves combining four largely independent 
 1. There must be a way to retrieve a dataset.
 2. There must be a way to retrieve a model.
 3. There must be a way to train a model on a dataset.
-4. Three must be a way to prune a model.
+4. There must be a way to prune a model.
 
 This framework breaks these components into distinct modules that are as independent as possible. The common specification for these modules is the `Hparams` objects. To request a dataset from the dataset module, provide a `DatasetHparams` instance. To request a model from the models module, provide a `ModelHparams` instance. To train a model, provide a dataset, a model, and a `TrainingHparams` instance. To prune a model, provide the model and a `PruningHparams` object. The inner workings of these modules can be understood largely independently from each other, with a few final abstractions to glue everything together.
 
